@@ -11,7 +11,7 @@
 <body>
     <h1>Bat Ball Stump Game</h1>
     <button onclick="
-    generateComputerChoice();
+   let computerChoice= generateComputerChoice();
    
     let resultMsg;
     if(computerChoice == 'Ball'){
@@ -26,7 +26,7 @@
     ">Bat</button>
 
     <button onclick="
-    generateComputerChoice();
+   computerChoice= generateComputerChoice();
    
      let resultMsg;
     if(computerChoice == 'Ball'){
@@ -41,7 +41,7 @@
     ">Ball</button>
     
     <button onclick="
-    generateComputerChoice();
+   computerChoice= generateComputerChoice();
    
      let resultMsg;
     if(computerChoice == 'Ball'){
@@ -55,16 +55,15 @@
     alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`);
     ">Stump</button>
 
-    <script>
-        let computerChoice;
+    <script> 
         function generateComputerChoice(){
             let randomNumber = Math.random() * 3;
             if(randomNumber > 0 && randomNumber <= 1){
-                computerChoice = 'Bat';
+                return 'Bat';
             }else if(randomNumber > 1 && randomNumber <= 2){
-                computerChoice = 'Ball';
+                return 'Ball';
             }else{
-                computerChoice = 'Stump';
+                return 'Stump';
             }
         }
     </script>
